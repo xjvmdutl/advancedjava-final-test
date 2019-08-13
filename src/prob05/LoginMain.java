@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class LoginMain {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws UserNotFoundException, PasswordDismatchException {
 		Scanner scanner = new Scanner(System.in);
 		
 		List<User> joinUsers = new ArrayList<User>();
@@ -22,6 +22,9 @@ public class LoginMain {
 		/*
 		 *  로그인 처리 부분을 완성 합니다.
 		 */
+		User user=new User(id,password);
+		login(joinUsers,user);
+		
 		
 
 	}

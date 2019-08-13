@@ -11,6 +11,28 @@ public class CalcApp {
 		int a = scanner.nextInt();
 		int b = scanner.nextInt();
 		String operation = scanner.next();
+		Arithmetic ari;
+		switch(operation) {
+		case "*":
+			ari = new Mul();
+			System.out.println(ari.calculate(a, b));
+			break;
+		case "+":
+			ari = new Add();
+			System.out.println(ari.calculate(a, b));
+			break;
+		case "-":
+			ari = new Sub();
+			System.out.println(ari.calculate(a, b));
+			break;
+		case "/":
+			ari = new Div();
+			System.out.println(ari.calculate(a, b));
+			break;
+		default:
+			System.out.println("연산자가 없습니다.");
+			break;
+		}
 		
 		/* operation에 따라 4칙 연산 객체를 생성하고 caculate 메서드를 호출합니다. */
 	}
